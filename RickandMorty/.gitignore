@@ -42,3 +42,10 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Ignorar la configuración de Angular
+.angular-config.json
+
+# Ignorar todas las carpetas y archivos de configuración
+/.aspnet/
+/.azuredatastudio/
