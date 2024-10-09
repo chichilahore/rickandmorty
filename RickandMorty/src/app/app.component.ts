@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CharacterComponent } from './character/character.component'; // Asegúrate de ajustar la ruta
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CharacterComponent,], // Agregar HttpClientModule aquí
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'RickandMorty';
+  title = 'Rick and Morty';
 }

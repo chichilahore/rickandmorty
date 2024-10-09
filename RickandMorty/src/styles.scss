@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --claro: #fff;
+    --verde: #8d5;
+    --verde-oscuro: #46581d;
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #60802f #f0f0f0;
+}
+
+html::-webkit-scrollbar {
+    width: 12px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #60802f;
+    border-radius: 6px;
+}
+
+html::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 6px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background-color: #4c6b26;
+}
+
+
+body {
+    font-family: sans-serif;
+    color: var(--claro);
+    max-width: 1080px;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: var(--verde-oscuro);
+}
+
+h1 {
+    display: none;
+}
+
+h2 {
+    font-size: 3em;
+    margin-block-end: 1.5em;
+}
+
+img.logo {
+    width: 50%;
+    display: block;
+    margin: 1em auto;
+}

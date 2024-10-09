@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="searchContainer">
+    <input type="text" placeholder="Troba un personatge..." [(ngModel)]="searchText" (input)="onSearchChange()" />
+  </div>
+
+  <h2>Llista de personatges</h2>
+
+  <ng-template [ngIf]="isLoading">
+    <div>Carregant personatges...</div>
+  </ng-template>
+
+  <ng-template [ngIf]="!isLoading">
+    <ng-template [ngIf]="characters.length > 0">
+      <div class="character-grid">
+        <ng-container *ngFor="let character of characters">
+          <div class="character-card">
+            <img [src]="character.image" [alt]="character.name">
+            <h3>{{ character.name }}</h3>
+            <p>{{ character.status }}</p>
+          </div>
+        </ng-container>
+      </div>
+    </ng-template>
+
+    <ng-template [ngIf]="characters.length === 0">
+      <div>No s'han trobat personatges.</div>
+    </ng-template>
+  </ng-template>
+</div>
